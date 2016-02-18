@@ -19,7 +19,9 @@ gulp.task('jshint', function() {
 // Compile Sass task
 gulp.task('sass', function() {
   return gulp.src('site/scss/*.scss')
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: require('node-bourbon').includePaths 
+    }))
     .pipe(gulp.dest('site/css'));
 });
 gulp.task('watch', function() {
@@ -47,7 +49,7 @@ gulp.task('scripts', function() {
 // Styles build task, concatenates all the files
 gulp.task('styles', function() {
   return gulp.src('site/css/*.css')
-    .pipe(concat('styles.css'))
+    .pipe(concat('style.css'))
     .pipe(gulp.dest('build/css'));
 });
 // Image optimization task
