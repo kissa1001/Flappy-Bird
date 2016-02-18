@@ -1,3 +1,6 @@
+@import "normalize";
+@import "bourbon/bourbon";
+@import "neat/neat";
 body{
 	background:url("../img/background.gif");
   	background-repeat: no-repeat;
@@ -7,14 +10,13 @@ body{
     font-family: "Flappy";
     src: url('../font/flappy.ttf') format("truetype");
 }
+
+$font-color:#fff;
+@mixin centerer{
+	text-align:center;
+}
+
 .header{
-	font-family: "Flappy", Verdana, Tahoma;
-	font-size:5em;
-	color:#fff;
-}
-.btn-danger{
-	width:8em;
-}
-.call-to-action{
-	margin-top: 5em;
+	color:$font-color;
+	@include centerer;
 }
