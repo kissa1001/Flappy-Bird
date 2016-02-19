@@ -23,6 +23,12 @@ $link-hover:#fff;
 }
 body{
 	@include background('../img/background.gif');
+	@media screen and ($phone) {
+        @include background('../img/background-mobile.jpg');
+    }
+    @media screen and ($tablet) {
+        @include background('../img/background-tablet.jpg');
+    }
 }
 .top-navigation{
 	background: $background-color;
