@@ -369,6 +369,16 @@ body {
   background-image: url("../img/background.gif");
   background-repeat: no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 600px) {
+    body {
+      background-image: url("../img/background-mobile.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; } }
+  @media screen and (max-width: 768px) {
+    body {
+      background-image: url("../img/background-tablet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover; } }
 
 .top-navigation {
   background: #292929;
