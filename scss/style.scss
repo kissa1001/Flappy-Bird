@@ -2,7 +2,7 @@
 @import "bourbon";
 @import "neat";
 
-@include font-face("flappy", "../fonts/flappy.ttf");
+@include font-face("flappy", "../fonts/flappy");
 @mixin background($imgpath,$repeat: no-repeat) {
     background: {
         image: url($imgpath);
