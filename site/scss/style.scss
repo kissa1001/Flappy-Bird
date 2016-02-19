@@ -1,22 +1,83 @@
 @import "normalize";
-@import "bourbon/bourbon";
-@import "neat/neat";
-body{
-	background:url("../img/background.gif");
-  	background-repeat: no-repeat;
- 	background-size: cover;
-}
-@font-face {
-    font-family: "Flappy";
-    src: url('../font/flappy.ttf') format("truetype");
-}
+@import "bourbon";
+@import "neat";
 
+@include font-face("flappy", "../fonts/flappy.ttf");
+@mixin background($imgpath,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        repeat: $repeat;
+        size: cover;
+    }
+}
+$dancing-script:'Dancing Script', cursive;
+$alegreya:'Alegreya',serif;
+$flappy-font:'Flappy';
+$phone:'max-width:600px';
+$tablet: 'max-width: 768px'; 
 $font-color:#fff;
+$background-color:#292929;
+$link-color:#F5F4F4;
+$link-hover:#fff;
 @mixin centerer{
 	text-align:center;
 }
-
+body{
+	@include background('../img/background.gif');
+}
+.top-navigation{
+	background: $background-color;
+	width:100%;
+	padding:0.1em 2em;
+	ul{
+		list-style: none;
+	}
+	li{
+		display:inline;
+	}
+	.active{
+		font-family: $dancing-script;
+		font-size: 1.2em;
+	}
+	.text-right{
+		float:right;
+		font-family: $alegreya;
+	}
+	a{
+		color:$link-color;
+		font-size: 1.1em;
+		text-decoration: none;
+		&:hover{
+			color:$link-hover;
+		}
+	}
+}
 .header{
+	font-family: $flappy-font;
+	font-size: 5em;
 	color:$font-color;
 	@include centerer;
+	@media screen and ($phone) {
+        font-size: 3em;
+    }
+    @media screen and ($tablet) {
+        font-size: 2em;
+    }
+}
+.call-to-action{
+	@include centerer;
+	#play{
+		padding:0.8em 2.5em;
+		font-family: $alegreya;
+		font-size: 1.1em;
+		background:#DC3030;
+		color:#fff;
+		border:none;
+		&:hover{
+			@include transition(all 0.5s ease-in-out);
+			color:#DC3030;
+			border:1px solid #DC3030;
+			background:#fff;
+		}
+	}
 }
