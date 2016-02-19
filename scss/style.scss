@@ -12,8 +12,9 @@
 $dancing-script:'Dancing Script', cursive;
 $alegreya:'Alegreya',serif;
 $flappy-font:'Flappy';
-$phone:'max-width:600px';
-$tablet: 'max-width: 768px'; 
+$phone:'max-width:640px';
+$tablet-min: 'max-width: 768px'; 
+$tablet-max: 'min-width: 640px';
 $font-color:#fff;
 $background-color:#292929;
 $link-color:#F5F4F4;
@@ -22,11 +23,11 @@ $link-hover:#fff;
 	text-align:center;
 }
 body{
-	@include background('../img/background.gif');
+		@include background('../img/background.gif');
 	@media screen and ($phone) {
         @include background('../img/background-mobile.jpg');
     }
-    @media screen and ($tablet) {
+    @media screen and ($tablet-min) and ($tablet-max) {
         @include background('../img/background-tablet.jpg');
     }
 }
@@ -58,15 +59,15 @@ body{
 	}
 }
 .header{
-	font-family: $flappy-font;
-	font-size: 5em;
-	color:$font-color;
-	@include centerer;
+        font-family: $flappy-font;
+		font-size: 5em;
+		color: $font-color;
+		@include centerer;
 	@media screen and ($phone) {
-        font-size: 3em;
+        visibility: hidden;
     }
-    @media screen and ($tablet) {
-        font-size: 2em;
+    @media screen and ($tablet-min) and ($tablet-max) {
+        visibility: hidden;
     }
 }
 .call-to-action{

@@ -369,12 +369,12 @@ body {
   background-image: url("../img/background.gif");
   background-repeat: no-repeat;
   background-size: cover; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 640px) {
     body {
       background-image: url("../img/background-mobile.jpg");
       background-repeat: no-repeat;
       background-size: cover; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) and (min-width: 640px) {
     body {
       background-image: url("../img/background-tablet.jpg");
       background-repeat: no-repeat;
@@ -406,12 +406,12 @@ body {
   font-size: 5em;
   color: #fff;
   text-align: center; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 640px) {
     .header {
-      font-size: 3em; } }
-  @media screen and (max-width: 768px) {
+      visibility: hidden; } }
+  @media screen and (max-width: 768px) and (min-width: 640px) {
     .header {
-      font-size: 2em; } }
+      visibility: hidden; } }
 
 .call-to-action {
   text-align: center; }
