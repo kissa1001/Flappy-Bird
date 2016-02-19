@@ -1,8 +1,7 @@
 @import "normalize";
 @import "bourbon";
 @import "neat";
-
-@include font-face("flappy", "../fonts/flappy");
+@include font-face("flappy", font-files("font/flappy.ttf"));
 @mixin background($imgpath,$repeat: no-repeat) {
     background: {
         image: url($imgpath);

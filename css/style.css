@@ -363,7 +363,7 @@ html {
   font-family: "flappy";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/flappy.ttf.eot?#iefix") format("embedded-opentype"), url("../fonts/flappy.ttf.woff2") format("woff2"), url("../fonts/flappy.ttf.woff") format("woff"), url("../fonts/flappy.ttf.ttf") format("truetype"), url("../fonts/flappy.ttf.svg#flappy") format("svg"); }
+  src: url('font-files("font/flappy.ttf").eot?#iefix') format("embedded-opentype"), url('font-files("font/flappy.ttf").woff2') format("woff2"), url('font-files("font/flappy.ttf").woff') format("woff"), url('font-files("font/flappy.ttf").ttf') format("truetype"), url('font-files("font/flappy.ttf").svg#flappy') format("svg"); }
 
 body {
   background-image: url("../img/background.gif");
